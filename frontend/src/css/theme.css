@@ -1,0 +1,48 @@
+:root {
+  --light-background: #f8fafc;
+  --light-background-alt: #e5e7eb;
+  --light-text: #111827;
+  --light-text-alt: #4b5563;
+
+  --dark-background: #263238;
+  --dark-background-alt: #6b7280;
+  --dark-text: #f8fafc;
+  --dark-text-alt: #d1d5db;
+
+  --accent-text: #eff6ff;
+  --accent-text-hover: #bfdbfe;
+  --accent-text-active: #93c5fd;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-active: #1e40af;
+  --accent-darker: var(--accent-hover);
+  --accent-hover-darker: var(--accent-active);
+  --accent-active-darker: #1e3a8a;
+
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  --radius: 0.5rem;
+}
+
+[data-theme="light"] {
+  --background: var(--light-background);
+  --background-alt: var(--light-background-alt);
+  --text: var(--light-text);
+  --text-alt: var(--light-text-alt);
+}
+
+[data-theme="dark"] {
+  --background: var(--dark-background);
+  --background-alt: var(--dark-background-alt);
+  --text: var(--dark-text);
+  --text-alt: var(--dark-text-alt);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: var(--dark-background);
+    --background-alt: var(--dark-background-alt);
+    --text: var(--dark-text);
+    --text-alt: var(--dark-text-alt);
+  }
+}
